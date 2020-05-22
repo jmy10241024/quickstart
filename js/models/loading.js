@@ -5,12 +5,5 @@ export const loading = {
     SET_LOADING: {
       reducer: 'MERGE',
     },
-    SET_LOADING_PERCENTAGE: {
-      reducer: (state, { payload }) => ({
-        ...state,
-        visible: true,
-        percentage: payload,
-      }),
-    },
   },
 };

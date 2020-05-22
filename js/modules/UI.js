@@ -1,6 +1,5 @@
 import { Platform, Dimensions, PixelRatio, NativeModules } from 'react-native';
 import { getStatusBarHeight } from 'react-native-status-bar-height';
-// import i18n from '~/i18n';
 
 const { StatusBarManager } = NativeModules;
 const deviceWidth = Dimensions.get('window').width;
@@ -19,7 +18,7 @@ const XR_WIDTH = 414;
 const XR_HEIGHT = 896;
 
 const color = {
-  primary: '#F3CF46',
+  primary: '#FFD033',
   primary2: '#FE8811',
   bg: '#F9F9FA',
   white: '#ffffff',
@@ -28,7 +27,6 @@ const color = {
   text2: '#9D9DAD',
   text3: '#CECED6',
   text4: '#E6E6EA',
-  text5: '#333333',
 };
 
 const size = {

@@ -1,21 +1,11 @@
 import { NativeModules } from 'react-native';
 
-// const { RosenModule } = NativeModules;
-const { TodoList } = NativeModules;
+const { MyPackage } = NativeModules;
 
-function addCalendar() {}
-
-function cancelCalendar() {}
-
-function pay(params, res) {}
-
-function addWithCallback(params, res) {
-  TodoList.addWithCallback(params, res);
+function callNative(params, res) {
+  return;
 }
 
 module.exports = {
-  addCalendar,
-  cancelCalendar,
-  pay,
-  addWithCallback,
+  callNative,
 };

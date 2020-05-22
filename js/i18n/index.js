@@ -11,6 +11,7 @@ const locales = RNLocalize.getLocales();
 if (Array.isArray(locales)) {
   I18n.locale = locales[0].languageCode;
 }
+
 I18n.fallbacks = true;
 I18n.translations = {
   en,

@@ -5,10 +5,8 @@
     "login": "登录"
   },
   "tab": {
-    "lesson": "课程",
-    "book": "图书",
-    "learn": "学习",
-    "parental": "我的"
+    "home": "首页",
+    "account": "个人"
   },
   "home": {
     "jump": "跳转到设置页"

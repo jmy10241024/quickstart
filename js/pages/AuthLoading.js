@@ -1,30 +1,28 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { ActivityIndicator, StatusBar, StyleSheet, View } from 'react-native';
-import { connect } from 'react-redux';
-import R from 'ramda';
-import { dispatch } from '~/modules/redux-app-config';
+import { useSelector, shallowEqual } from 'react-redux';
+import { useNavigation } from 'react-navigation-hooks';
 
-import SplashScreen from 'react-native-splash-screen';
-
-@connect(R.pick(['userInfo']))
-class AuthLoadingScreen extends React.Component {
-  UNSAFE_componentWillMount() {
-    dispatch('GET_USERINFO', {
-      callback: res => {
-        SplashScreen.hide();
-        this.props.navigation.navigate('main', { transition: 'forFade' });
-      },
-    });
-  }
-
-  render() {
-    return (
-      <View style={styles.container}>
-        <ActivityIndicator />
-        <StatusBar barStyle="default" />
-      </View>
-    );
-  }
+function AuthLoadingScreen() {
+  const { navigate } = useNavigation();
+  const userInfo = useSelector(state => state.userInfo, shallowEqual);
+  const { user } = userInfo;
+  useEffect(
+    () => {
+      if (user) {
+        navigate('main', { transition: 'forFade' });
+      } else {
+        navigate('login', { transition: 'forFade' });
+      }
+    },
+    [navigate, user, userInfo],
+  );
+  return (
+    <View style={styles.container}>
+      <ActivityIndicator />
+      <StatusBar barStyle="default" />
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({

@@ -38,6 +38,8 @@ yarn-error.log
 # BUCK
 buck-out/
 \.buckd/
+*.keystore
+!debug.keystore
 
 # fastlane
 #
@@ -55,6 +57,3 @@ buck-out/
 
 # CocoaPods
 /ios/Pods/
-
-# react-native-config codegen
-ios/tmp.xcconfig

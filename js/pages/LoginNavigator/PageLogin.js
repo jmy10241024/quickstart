@@ -11,7 +11,6 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import { connect } from 'react-redux';
-import Promise from 'bluebird';
 import actions, { dispatch } from '~/modules/redux-app-config';
 import R from 'ramda';
 import UI from '~/modules/UI';
@@ -37,9 +36,13 @@ class PageLogin extends Component {
   login() {
     Keyboard.dismiss();
     dispatch('SET_LOADING', { visible: true });
-    Promise.delay(2000).then(() => {
-      dispatch('SET_LOADING', { visible: false });
-      this.props.navigation.navigate('main');
+    dispatch('USER_LOGIN', {
+      mobile: '13300000000',
+      password: '123456',
+      res: () => {
+        dispatch('SET_LOADING', { visible: false });
+        this.props.navigation.navigate('main');
+      },
     });
   }
 
@@ -49,9 +52,7 @@ class PageLogin extends Component {
         <KeyboardAvoidingView
           style={styles.container}
           behavior="position"
-          keyboardVerticalOffset={
-            -UI.scaleSize(110) - UI.size.statusBarHeight - UI.scaleSize(20)
-          }
+          keyboardVerticalOffset={-UI.scaleSize(110) - UI.size.statusBarHeight - UI.scaleSize(20)}
         >
           <View style={{ paddingBottom: UI.scaleSize(110) }} />
           <Image source={logoImg} style={styles.logoImg} />
@@ -71,11 +72,7 @@ class PageLogin extends Component {
             autoCorrect={false}
             secureTextEntry
           />
-          <TouchableOpacity
-            onPress={this.login}
-            style={styles.btnView}
-            activeOpacity={1}
-          >
+          <TouchableOpacity onPress={this.login} style={styles.btnView} activeOpacity={1}>
             <Text style={styles.loginText}>{i18n.t('login.login')}</Text>
           </TouchableOpacity>
         </KeyboardAvoidingView>

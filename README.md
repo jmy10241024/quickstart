@@ -1,2 +1,0 @@
-# quickstart
-react native quickstart

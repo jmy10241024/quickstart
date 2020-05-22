@@ -1,12 +1,10 @@
 import { Alert } from 'react-native';
 import { dispatch, store } from '~/modules/redux-app-config';
-import { Toast } from 'teaset';
-import Global from '~/modules/global';
+import Config from 'react-native-config';
 
 function checkStatus(response) {
   console.log(' ============ response ============ ', response);
   if (response.code === 401) {
-    dispatch('GET_USERINFO');
   }
   return response;
 }
@@ -26,12 +24,12 @@ export default function request(url, options) {
   const status = checkNet();
   if (!status) {
     return new Promise(res => {
-      Toast.fail('请检查网络');
+      Alert.alert('请检查网络');
       res({ msg: 'fail' });
     });
   }
   if (!url.startsWith('http')) {
-    url = Global.getApiUrl() + url;
+    url = Config.API_URL + url;
   }
   const defaultOptions = {};
   const newOptions = { ...defaultOptions, ...options };
@@ -55,7 +53,7 @@ export default function request(url, options) {
     .then(checkStatus)
     .catch(e => {
       if (e.toString() === 'Error: Request Timeout') {
-        Toast.fail('请求超时');
+        Alert.alert('请求超时');
       }
     });
 }

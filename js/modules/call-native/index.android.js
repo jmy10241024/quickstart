@@ -1,22 +1,11 @@
 import { NativeModules } from 'react-native';
 
-const { RosenModule } = NativeModules;
+const { MyPackage } = NativeModules;
 
-function addCalendar(params, res) {
-  RosenModule.addCalendar(params, res);
-}
-
-function cancelCalendar(res) {
-  RosenModule.deleteCalendar(res);
-}
-
-// 支付
-function pay(params, res) {
-  RosenModule.pay(params, res);
+function callNative(params, res) {
+  MyPackage.sendMessage(params, res);
 }
 
 module.exports = {
-  addCalendar,
-  cancelCalendar,
-  pay,
+  callNative,
 };

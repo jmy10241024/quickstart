@@ -36,12 +36,7 @@ function filterUrl(url) {
 }
 
 function getHeader(store) {
-  const headers = {
-    device: JSON.stringify({
-      imei: `${store.getState().deviceInfo.uniqueId}`,
-      platformId: Platform.OS === 'ios' ? '0' : '1',
-    }),
-  };
+  const headers = {};
   const { token } = store.getState().userInfo;
   if (token) {
     headers.token = token;
