@@ -1,0 +1,39 @@
+{
+  "name": "quickstart",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "local": "./update-node_modules.sh && ENVFILE=.env react-native run-android",
+    "dev": "./update-node_modules.sh && ENVFILE=.env.development react-native run-android",
+    "prod": "./update-node_modules.sh && ENVFILE=.env.production react-native run-android",
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "start": "react-native start",
+    "build:local": "./update-node_modules.sh && cd android && ENVFILE=.env ./gradlew assembleRelease",
+    "build:dev": "./update-node_modules.sh && cd android && ENVFILE=.env.development ./gradlew assembleRelease",
+    "build:prod": "./update-node_modules.sh && cd android && ENVFILE=.env.production ./gradlew assembleRelease",
+    "install-apk": "adb install -r ./android/app/build/outputs/apk/release/app-release.apk",
+    "test": "jest",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "react": "16.11.0",
+    "react-native": "0.62.2",
+    "react-native-config": "^1.1.0",
+    "react-native-swiper": "^1.6.0",
+    "react-native-tab-view": "^2.14.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/runtime": "^7.9.6",
+    "@react-native-community/eslint-config": "^1.1.0",
+    "babel-jest": "^26.0.1",
+    "eslint": "^7.0.0",
+    "jest": "^26.0.1",
+    "metro-react-native-babel-preset": "^0.59.0",
+    "react-test-renderer": "16.11.0"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
