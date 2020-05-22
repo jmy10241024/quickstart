@@ -1,0 +1,25 @@
+{
+  "login": {
+    "email": "邮箱",
+    "password": "密码",
+    "login": "登录"
+  },
+  "tab": {
+    "lesson": "课程",
+    "book": "图书",
+    "learn": "学习",
+    "parental": "我的"
+  },
+  "home": {
+    "jump": "跳转到设置页"
+  },
+  "list": {
+    "jump": "跳转到详情页"
+  },
+  "account": {
+    "logout": "退出登录"
+  },
+  "warn": {
+    "error": "发生错误，请重试"
+  }
+}
