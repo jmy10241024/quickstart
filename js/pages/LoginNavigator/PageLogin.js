@@ -10,30 +10,81 @@ import {
   Keyboard,
   TouchableOpacity,
 } from 'react-native';
-import { connect } from 'react-redux';
+
+import { useNavigation } from 'react-navigation-hooks';
+
 import actions, { dispatch } from '~/modules/redux-app-config';
-import R from 'ramda';
 import UI from '~/modules/UI';
 import i18n from '~/i18n';
 
 const logoImg = require('./img/logo.png');
 
-@connect(
-  R.pick(['']),
-  actions,
-)
-class PageLogin extends Component {
-  static navigationOptions = ({ navigation }) => ({
-    header: null,
-  });
+// @connect(
+//   R.pick(['']),
+//   actions,
+// )
+// class PageLogin extends Component {
+//   static navigationOptions = ({ navigation }) => ({
+//     header: null,
+//   });
 
-  constructor(props) {
-    super(props);
-    this.state = {};
-    this.login = this.login.bind(this);
-  }
+//   constructor(props) {
+//     super(props);
+//     this.state = {};
+//     this.login = this.login.bind(this);
+//   }
 
-  login() {
+//   login() {
+//     Keyboard.dismiss();
+//     dispatch('SET_LOADING', { visible: true });
+//     dispatch('USER_LOGIN', {
+//       mobile: '13300000000',
+//       password: '123456',
+//       res: () => {
+//         dispatch('SET_LOADING', { visible: false });
+//         this.props.navigation.navigate('main');
+//       },
+//     });
+//   }
+
+//   render() {
+//     return (
+//       <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
+//         <KeyboardAvoidingView
+//           style={styles.container}
+//           behavior="position"
+//           keyboardVerticalOffset={-UI.scaleSize(110) - UI.size.statusBarHeight - UI.scaleSize(20)}
+//         >
+//           <View style={{ paddingBottom: UI.scaleSize(110) }} />
+//           <Image source={logoImg} style={styles.logoImg} />
+//           <TextInput
+//             style={styles.email}
+//             placeholder={i18n.t('login.email')}
+//             placeholderTextColor={UI.color.text3}
+//             keyboardType="email-address"
+//             autoCorrect={false}
+//             maxLength={11}
+//           />
+//           <TextInput
+//             style={styles.password}
+//             placeholder={i18n.t('login.password')}
+//             placeholderTextColor={UI.color.text3}
+//             // keyboardType="email-address"
+//             autoCorrect={false}
+//             secureTextEntry
+//           />
+//           <TouchableOpacity onPress={this.login} style={styles.btnView} activeOpacity={1}>
+//             <Text style={styles.loginText}>{i18n.t('login.login')}</Text>
+//           </TouchableOpacity>
+//         </KeyboardAvoidingView>
+//       </TouchableWithoutFeedback>
+//     );
+//   }
+// }
+
+function PageLogin() {
+  const { navigate } = useNavigation();
+  const login = () => {
     Keyboard.dismiss();
     dispatch('SET_LOADING', { visible: true });
     dispatch('USER_LOGIN', {
@@ -41,44 +92,41 @@ class PageLogin extends Component {
       password: '123456',
       res: () => {
         dispatch('SET_LOADING', { visible: false });
-        this.props.navigation.navigate('main');
+        navigate('main', { transition: 'forFade' });
       },
     });
-  }
-
-  render() {
-    return (
-      <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
-        <KeyboardAvoidingView
-          style={styles.container}
-          behavior="position"
-          keyboardVerticalOffset={-UI.scaleSize(110) - UI.size.statusBarHeight - UI.scaleSize(20)}
-        >
-          <View style={{ paddingBottom: UI.scaleSize(110) }} />
-          <Image source={logoImg} style={styles.logoImg} />
-          <TextInput
-            style={styles.email}
-            placeholder={i18n.t('login.email')}
-            placeholderTextColor={UI.color.text3}
-            keyboardType="email-address"
-            autoCorrect={false}
-            maxLength={11}
-          />
-          <TextInput
-            style={styles.password}
-            placeholder={i18n.t('login.password')}
-            placeholderTextColor={UI.color.text3}
-            // keyboardType="email-address"
-            autoCorrect={false}
-            secureTextEntry
-          />
-          <TouchableOpacity onPress={this.login} style={styles.btnView} activeOpacity={1}>
-            <Text style={styles.loginText}>{i18n.t('login.login')}</Text>
-          </TouchableOpacity>
-        </KeyboardAvoidingView>
-      </TouchableWithoutFeedback>
-    );
-  }
+  };
+  return (
+    <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
+      <KeyboardAvoidingView
+        style={styles.container}
+        behavior="position"
+        keyboardVerticalOffset={-UI.scaleSize(110) - UI.size.statusBarHeight - UI.scaleSize(20)}
+      >
+        <View style={{ paddingBottom: UI.scaleSize(110) }} />
+        <Image source={logoImg} style={styles.logoImg} />
+        <TextInput
+          style={styles.email}
+          placeholder={i18n.t('login.email')}
+          placeholderTextColor={UI.color.text3}
+          keyboardType="email-address"
+          autoCorrect={false}
+          maxLength={11}
+        />
+        <TextInput
+          style={styles.password}
+          placeholder={i18n.t('login.password')}
+          placeholderTextColor={UI.color.text3}
+          // keyboardType="email-address"
+          autoCorrect={false}
+          secureTextEntry
+        />
+        <TouchableOpacity onPress={login} style={styles.btnView} activeOpacity={1}>
+          <Text style={styles.loginText}>{i18n.t('login.login')}</Text>
+        </TouchableOpacity>
+      </KeyboardAvoidingView>
+    </TouchableWithoutFeedback>
+  );
 }
 
 const styles = StyleSheet.create({
