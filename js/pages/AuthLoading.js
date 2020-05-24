@@ -7,16 +7,25 @@ function AuthLoadingScreen() {
   const { navigate } = useNavigation();
   const userInfo = useSelector(state => state.userInfo, shallowEqual);
   const { user } = userInfo;
+  // 强制登陆
+  // useEffect(
+  //   () => {
+  //     if (user) {
+  //       navigate('main', { transition: 'forFade' });
+  //     } else {
+  //       navigate('login', { transition: 'forFade' });
+  //     }
+  //   },
+  //   [navigate, user, userInfo],
+  // );
+  // 非强制登陆
   useEffect(
     () => {
-      if (user) {
-        navigate('main', { transition: 'forFade' });
-      } else {
-        navigate('login', { transition: 'forFade' });
-      }
+      navigate('main', { transition: 'forFade' });
     },
-    [navigate, user, userInfo],
+    [navigate],
   );
+
   return (
     <View style={styles.container}>
       <ActivityIndicator />

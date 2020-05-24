@@ -14,6 +14,7 @@ import UI from '~/modules/UI';
 import AuthLoading from '~/pages/AuthLoading.js';
 import PageLogin from '~/pages/LoginNavigator/PageLogin';
 import TabNavigator from '~/pages/MainNavigator/TabNavigator';
+import MyWeb from '~/components/my-web'; // 加载h5页面
 
 const TransitionConfiguration = () => ({
   screenInterpolator: sceneProps => {
@@ -56,6 +57,7 @@ const LoginNavigator = createStackNavigator(
 export const MainNavigator = createStackNavigator(
   {
     tab: { screen: TabNavigator },
+    myWeb: { screen: MyWeb },
   },
   {
     initialRouteName: 'tab',
@@ -67,10 +69,11 @@ export const MainNavigator = createStackNavigator(
       gesturesEnabled: true,
     },
     defaultNavigationOptions: {
-      headerStyle: {
-        height: UI.size.statusBarHeight + UI.scaleSize(50),
-        paddingTop: UI.size.statusBarHeight,
-      },
+      // headerStyle: {
+      //   height: UI.size.statusBarHeight + UI.scaleSize(50),
+      //   paddingTop: UI.size.statusBarHeight,
+      // },
+      header: null,
     },
   },
 );
