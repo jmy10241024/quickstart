@@ -26,10 +26,7 @@ class MyTouchable extends Component {
         {...this.props}
         onPress={() => {
           this.setState({ waiting: true });
-          // if (playSound && store.getState().settings.sound) {
-          //   AudioManager.click();
-          // }
-          if (playSound) {
+          if (playSound && store.getState().settings.sound) {
             AudioManager.click();
           }
           onPress && onPress();
