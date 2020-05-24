@@ -47,6 +47,9 @@ const LoginNavigator = createStackNavigator(
         shadowOpacity: 0,
       },
     },
+    defaultNavigationOptions: {
+      header: null,
+    },
   },
 );
 
