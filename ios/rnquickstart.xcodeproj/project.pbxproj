@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		002F41E3247AA02900FB1971 /* misread.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 002F41DA247AA02800FB1971 /* misread.mp3 */; };
+		002F41E4247AA02900FB1971 /* flip_book.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 002F41DB247AA02800FB1971 /* flip_book.mp3 */; };
+		002F41E5247AA02900FB1971 /* click.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 002F41DC247AA02800FB1971 /* click.mp3 */; };
+		002F41E6247AA02900FB1971 /* score_low.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 002F41DD247AA02800FB1971 /* score_low.mp3 */; };
+		002F41E7247AA02900FB1971 /* cannot_click.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 002F41DE247AA02900FB1971 /* cannot_click.mp3 */; };
+		002F41E8247AA02900FB1971 /* quiz_right.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 002F41DF247AA02900FB1971 /* quiz_right.mp3 */; };
+		002F41E9247AA02900FB1971 /* quiz_wrong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 002F41E0247AA02900FB1971 /* quiz_wrong.mp3 */; };
+		002F41EA247AA02900FB1971 /* flip_page.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 002F41E1247AA02900FB1971 /* flip_page.mp3 */; };
+		002F41EB247AA02900FB1971 /* score_high.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 002F41E2247AA02900FB1971 /* score_high.mp3 */; };
 		00E356F31AD99517003FC87E /* rnquickstartTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* rnquickstartTests.m */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
@@ -40,6 +49,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		002F41DA247AA02800FB1971 /* misread.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = misread.mp3; path = ../android/app/src/main/res/raw/misread.mp3; sourceTree = "<group>"; };
+		002F41DB247AA02800FB1971 /* flip_book.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = flip_book.mp3; path = ../android/app/src/main/res/raw/flip_book.mp3; sourceTree = "<group>"; };
+		002F41DC247AA02800FB1971 /* click.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = click.mp3; path = ../android/app/src/main/res/raw/click.mp3; sourceTree = "<group>"; };
+		002F41DD247AA02800FB1971 /* score_low.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = score_low.mp3; path = ../android/app/src/main/res/raw/score_low.mp3; sourceTree = "<group>"; };
+		002F41DE247AA02900FB1971 /* cannot_click.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = cannot_click.mp3; path = ../android/app/src/main/res/raw/cannot_click.mp3; sourceTree = "<group>"; };
+		002F41DF247AA02900FB1971 /* quiz_right.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = quiz_right.mp3; path = ../android/app/src/main/res/raw/quiz_right.mp3; sourceTree = "<group>"; };
+		002F41E0247AA02900FB1971 /* quiz_wrong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = quiz_wrong.mp3; path = ../android/app/src/main/res/raw/quiz_wrong.mp3; sourceTree = "<group>"; };
+		002F41E1247AA02900FB1971 /* flip_page.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = flip_page.mp3; path = ../android/app/src/main/res/raw/flip_page.mp3; sourceTree = "<group>"; };
+		002F41E2247AA02900FB1971 /* score_high.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = score_high.mp3; path = ../android/app/src/main/res/raw/score_high.mp3; sourceTree = "<group>"; };
 		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
 		00E356EE1AD99517003FC87E /* rnquickstartTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = rnquickstartTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -174,6 +192,15 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				002F41DE247AA02900FB1971 /* cannot_click.mp3 */,
+				002F41DC247AA02800FB1971 /* click.mp3 */,
+				002F41DB247AA02800FB1971 /* flip_book.mp3 */,
+				002F41E1247AA02900FB1971 /* flip_page.mp3 */,
+				002F41DA247AA02800FB1971 /* misread.mp3 */,
+				002F41DF247AA02900FB1971 /* quiz_right.mp3 */,
+				002F41E0247AA02900FB1971 /* quiz_wrong.mp3 */,
+				002F41E2247AA02900FB1971 /* score_high.mp3 */,
+				002F41DD247AA02800FB1971 /* score_low.mp3 */,
 				13B07FAE1A68108700A75B9A /* rnquickstart */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* rnquickstartTests */,
@@ -337,6 +364,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				002F41E6247AA02900FB1971 /* score_low.mp3 in Resources */,
+				002F41E4247AA02900FB1971 /* flip_book.mp3 in Resources */,
+				002F41E8247AA02900FB1971 /* quiz_right.mp3 in Resources */,
+				002F41E5247AA02900FB1971 /* click.mp3 in Resources */,
+				002F41E7247AA02900FB1971 /* cannot_click.mp3 in Resources */,
+				002F41E9247AA02900FB1971 /* quiz_wrong.mp3 in Resources */,
+				002F41EA247AA02900FB1971 /* flip_page.mp3 in Resources */,
+				002F41EB247AA02900FB1971 /* score_high.mp3 in Resources */,
+				002F41E3247AA02900FB1971 /* misread.mp3 in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 			);

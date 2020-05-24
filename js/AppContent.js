@@ -3,7 +3,8 @@ import { View, StyleSheet, Platform, BackHandler, ToastAndroid } from 'react-nat
 
 import { store } from '~/modules/redux-app-config';
 import { getRouteName } from '~/modules/services/utils';
-import AppLoading from '~/components/AppLoading';
+import AppLoading from '~/components/modal/AppLoading';
+import AppEnvModal from '~/components/modal/AppEnvModal';
 
 import AppWithNavigationState from './AppRouter';
 
@@ -34,6 +35,7 @@ function AppContent() {
         <AppWithNavigationState />
       </View>
       <AppLoading />
+      <AppEnvModal />
     </View>
   );
 }
