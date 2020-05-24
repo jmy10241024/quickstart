@@ -3,4 +3,5 @@ module.exports = {
   ...require('./loading'),
   ...require('./net-info-status'),
   ...require('./user-info'),
+  ...require('./settings'),
 };

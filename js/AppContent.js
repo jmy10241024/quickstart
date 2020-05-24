@@ -5,6 +5,7 @@ import { store } from '~/modules/redux-app-config';
 import { getRouteName } from '~/modules/services/utils';
 import AppLoading from '~/components/modal/AppLoading';
 import AppEnvModal from '~/components/modal/AppEnvModal';
+import EyesProtect from '~/components/modal/eyes-protect';
 
 import AppWithNavigationState from './AppRouter';
 
@@ -36,6 +37,7 @@ function AppContent() {
       </View>
       <AppLoading />
       <AppEnvModal />
+      <EyesProtect />
     </View>
   );
 }
