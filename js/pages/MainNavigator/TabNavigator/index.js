@@ -6,12 +6,14 @@ import R from 'ramda';
 
 import UI from '~/modules/UI';
 import i18n from '~/i18n';
+import TabBar from '~/components/TabBar';
 
 import Home from './Home';
 import Account from './Account';
 
 const tabConfig = {
   initialRouteName: 'home',
+  tabBarComponent: TabBar,
   defaultNavigationOptions: {
     headerStyle: {
       height: UI.size.statusBarHeight + UI.scaleSize(50),
