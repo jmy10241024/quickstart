@@ -2,6 +2,8 @@
 ## react native quickstart with rn 0.62
 ## yarn local
 ## yarn ios
+## 项目中,禁止使用自带的Image组件, ImageBackgound组件, SafeAreaView组件, 这些组件都会导致闪烁,用FastImage, 组件组合的方式, import { SafeAreaView } from 'react-navigation'(https://reactnavigation.org/docs/3.x/handling-iphonex)
+
 ### 1.AuthLoadingScreen中,目前是userInfo.user为true, 那么到主页, 如果false,那么到登录页, 必须登录才能到主页, 如果要改为打开app总是先到主页,那么改此处逻辑即可
 ### 2.目前,用户协议在登录页中(如果需要, 改到主页即可)
 ### 3.护眼模式,休息提醒,音效是否开启(封装TouchableOpacity,连接redux缓存实现),都存在缓存中, dispatch一下, 即可更改
