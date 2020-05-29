@@ -1,5 +1,6 @@
 source 'https://cdn.cocoapods.org/'
 platform :ios, '9.0'
+project 'rnquickstart.xcodeproj'
 require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
 
 def add_flipper_pods!
@@ -24,6 +25,7 @@ end
 
 target 'rnquickstart' do
   # Pods for rnquickstart
+  pod 'RNSpringScrollView', :path => '../node_modules/react-native-spring-scrollview/ios'
   pod 'FBLazyVector', :path => "../node_modules/react-native/Libraries/FBLazyVector"
   pod 'FBReactNativeSpec', :path => "../node_modules/react-native/Libraries/FBReactNativeSpec"
   pod 'RCTRequired', :path => "../node_modules/react-native/Libraries/RCTRequired"
