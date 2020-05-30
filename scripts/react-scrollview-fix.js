@@ -15,6 +15,4 @@ try {
   var result = data.replace(/react-native\/lib\/TextInputState/g, dataFix);
   fs.writeFileSync(file, result, 'utf8');
   console.log('> Done');
-} catch (error) {
-  console.error(error);
-}
+} catch (error) {}
